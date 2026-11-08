@@ -4,14 +4,15 @@
 export const IMG = ["telefon", "laptop", "casti", "ceas", "tv", "robot", "espresor", "airfryer", "mixer", "vertical", "controller", "tableta"].map(n => `/img/${n}.webp`);
 
 // [cheie, nume categorie, grup mega-meniu, index poză, [preț min, preț max], denumire produs, variante 1, variante 2]
-// ATENȚIE: ordinea și conținutul influențează generatorul – nu modifica (aceleași 480 de produse).
+// ATENȚIE: ordinea și conținutul influențează generatorul (seed fix). Prețurile minime la Căști (49) și Gaming (89)
+// au fost coborâte față de referință (149 / 199), ca să existe produse sub pragul de livrare gratuită.
 export const TYPES = [
   ["telefon", "Telefoane", "Telefoane & tablete", 0, [899, 5999], "Telefon", ["128 GB", "256 GB", "512 GB"], ["6,1\"", "6,5\"", "6,7\""]],
   ["tableta", "Tablete", "Telefoane & tablete", 11, [699, 4499], "Tabletă", ["64 GB", "128 GB", "256 GB"], ["10,9\"", "11\"", "12,4\""]],
   ["ceas", "Ceasuri smart", "Telefoane & tablete", 3, [299, 2499], "Ceas smart", ["GPS", "GPS + LTE"], ["41 mm", "45 mm"]],
   ["laptop", "Laptopuri", "Laptopuri & IT", 1, [2299, 9999], "Laptop", ["16 GB RAM", "32 GB RAM"], ["SSD 512 GB", "SSD 1 TB"]],
-  ["casti", "Căști", "Laptopuri & IT", 2, [149, 1899], "Căști wireless", ["ANC", "Bluetooth 5.3"], ["30 h", "40 h"]],
-  ["controller", "Gaming", "Laptopuri & IT", 10, [199, 499], "Controller wireless", ["PC / consolă"], ["20 h", "40 h"]],
+  ["casti", "Căști", "Laptopuri & IT", 2, [49, 1899], "Căști wireless", ["ANC", "Bluetooth 5.3"], ["30 h", "40 h"]],
+  ["controller", "Gaming", "Laptopuri & IT", 10, [89, 499], "Controller wireless", ["PC / consolă"], ["20 h", "40 h"]],
   ["tv", "Televizoare", "TV & audio", 4, [1499, 8999], "Televizor", ["4K UHD", "QLED 4K", "OLED 4K"], ["55\"", "65\"", "75\""]],
   ["robot", "Aspiratoare robot", "Electrocasnice", 5, [799, 3999], "Aspirator robot", ["mop", "stație autogolire"], ["LiDAR", "cameră AI"]],
   ["vertical", "Aspiratoare verticale", "Electrocasnice", 9, [499, 2899], "Aspirator vertical", ["fără fir"], ["60 min", "90 min"]],

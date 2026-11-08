@@ -12,7 +12,7 @@ export const norm = x => String(x).toLowerCase().normalize("NFD").replace(/[\u03
 export const slugify = x => norm(x).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 // Format românesc (2.999 lei · 19,99 lei), fără Intl – inițializarea ICU ro-RO costă ~40 ms la pornire.
 const grp = s => s.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-export const lei = n => { const v = Math.round(n * 100) / 100, [i, d] = Math.abs(v).toFixed(2).split("."); return (v < 0 ? "-" : "") + grp(i) + (n % 1 ? "," + d : "") + " lei" };
+export const lei = n => { const v = Math.round(n * 100) / 100, [i, d] = Math.abs(v).toFixed(2).split("."); return (v < 0 ? "-" : "") + grp(i) + (n % 1 ? "," + d : "") + (v == 1 ? " leu" : " lei") };
 export const esc = x => String(x).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[c]));
 
 // --- îmbogățire (nu atinge datele generate) ---

@@ -11,7 +11,7 @@ Magazin static (fără framework) de electronice și electrocasnice, cu mărci, 
   - `js/search.js`, `js/filters.js`, `js/cart.js`, `js/app.js`
   - `js/checkout.js`, `js/legal.js` – încărcate doar când e nevoie
   - `fonts/` – Inter și Space Grotesk, woff2 locale: latin, latin-ext și un subset mic `-ro` (ă, ș, ț)
-- `imagini/` – pozele originale (286 px)
+- `imagini/` – pozele originale (286 px), doar local (ignorate de git; copiile publicate sunt în `site/img/`)
 - `referinta/` – macheta de referință (ignorată de git, nu se publică)
 
 ## Rulare locală
